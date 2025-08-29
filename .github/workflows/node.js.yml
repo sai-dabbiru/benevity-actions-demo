@@ -34,9 +34,13 @@ jobs:
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
         EXCLUDE: ".git, /node_modules/"
+        SCRIPT_BEFORE: |
+          whoami
+          ls -al
         SCRIPT_AFTER: |
-         node -v
-         npm install
+          whoami
+          ls -al
+          echo $RSYNC_STDOUT
 
 
   
