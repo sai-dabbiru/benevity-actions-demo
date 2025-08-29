@@ -36,6 +36,7 @@ jobs:
         EXCLUDE: ".git, /node_modules/"
         SCRIPT_AFTER: |
          node -v
+         npm install
 
 
   
