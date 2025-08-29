@@ -49,7 +49,6 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
-        skip_host_key_check: true
         script: node -v
 
 
