@@ -41,8 +41,16 @@ jobs:
           whoami
           ls -al
           echo $RSYNC_STDOUT
-          node -v
-          npm install
+
+    - name: Execute remote SSH commands using password
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        skip_host_key_check: true
+        script: node -v
 
 
   
