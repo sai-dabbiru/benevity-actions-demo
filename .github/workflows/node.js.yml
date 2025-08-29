@@ -41,6 +41,8 @@ jobs:
           whoami
           ls -al
           echo $RSYNC_STDOUT
+          node -v
+          npm install
 
 
   
